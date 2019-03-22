@@ -1,14 +1,11 @@
 package com.example.lab_test2;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import com.example.lab_test2.MainActivity;
 
 
 public class descriptor extends AppCompatActivity {
@@ -23,22 +20,18 @@ public class descriptor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_descriptor);
 
-        //Linked with XML id
-        title = findViewById(R.id.title);
+        title = findViewById(R.id.title); //Linked with XML id
         description = findViewById(R.id.description);
         save = findViewById(R.id.save);
 
-        //Initialize Shared Preferencces
-        sp = getSharedPreferences(SHERED_PREF, MODE_PRIVATE);
+        sp = getSharedPreferences(SHERED_PREF, MODE_PRIVATE); //Initialize Shared Preferencces
         editor = sp.edit();
 
-        //
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //Put the value save and update
-                saveData();
+                saveData(); //Put the value save and update
                 updateData();
                 finish();
             }
@@ -46,25 +39,21 @@ public class descriptor extends AppCompatActivity {
     }
     private void saveData() {
 
-        //Put the values
-        String t = title.getText().toString();
+        String t = title.getText().toString(); //Put the values
         String d = description.getText().toString();
         editor.putString("Title",t);
         editor.putString("Desc",d);
 
-        //Apply the change
-        editor.apply();
+        editor.apply(); //Apply the change
     } //Save all data on SharedPreferences
 
     private void updateData() {
 
-        //Keep the values on EditText
-        String tt = sp.getString("Title",null);
+        String tt = sp.getString("Title",null); //Keep the values on EditText
         title.setText(tt);
         String dd = sp.getString("Desc",null);
         description.setText(dd);
 
-        //Update Data/values on Luncher Activity
-        MainActivity.one.setText(tt+"\n\n"+dd);
+        MainActivity.one.setText(tt+"\n\n"+dd); //Update Data/values on Luncher Activity
     }
 }

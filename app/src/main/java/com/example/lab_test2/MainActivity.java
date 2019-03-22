@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     static TextView three;
     static TextView four;
     static TextView five;
-    SharedPreferences sp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         diplayData();
-
     }
 
     private void diplayData() {
@@ -43,6 +42,5 @@ public class MainActivity extends AppCompatActivity {
         if(show != null){
             one.setText(show);
         }
-
     }
 }

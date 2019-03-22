@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/cc"
-
     tools:context=".descriptor">
+
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -63,8 +63,5 @@
             android:textSize="20sp"/>
     </LinearLayout>
 </ScrollView>
-
-
-
 
 </LinearLayout>
