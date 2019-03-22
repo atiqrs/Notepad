@@ -11,9 +11,9 @@ public class MainActivity extends AppCompatActivity {
 
     static TextView one;
     static TextView two;
-    TextView three;
-    TextView four;
-    TextView five;
+    static TextView three;
+    static TextView four;
+    static TextView five;
     SharedPreferences sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
