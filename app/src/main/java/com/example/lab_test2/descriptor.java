@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import com.example.lab_test2.MainActivity;
 
-//import static android.graphics.Typeface.DEFAULT_BOLD;
 
 public class descriptor extends AppCompatActivity {
 
@@ -64,11 +63,6 @@ public class descriptor extends AppCompatActivity {
         title.setText(tt);
         String dd = sp.getString("Desc",null);
         description.setText(dd);
-
-        /*
-        Typeface bold = Typeface.defaultFromStyle(Typeface.BOLD);
-        MainActivity.one.setTypeface(bold);
-        */
 
         //Update Data/values on Luncher Activity
         MainActivity.one.setText(tt+"\n\n"+dd);
