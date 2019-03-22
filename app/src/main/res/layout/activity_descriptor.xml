@@ -6,21 +6,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/cc"
-    android:padding="15dp"
+
     tools:context=".descriptor">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="vertical">
 
         <TextView
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
             android:textSize="25sp"
             android:textColor="@color/ee"/>
         <EditText
+            android:id="@+id/title"
+            android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@color/dd"
@@ -34,23 +42,29 @@
             android:textSize="25sp"
             android:textColor="@color/ee"/>
         <EditText
+            android:padding="5dp"
+            android:id="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="match_parent"
             android:background="@color/dd"
             android:textColor="@color/ee"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            android:textCursorDrawable="@null"/>
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:background="@color/ff"
+            android:text="Save"
+            android:textColor="@color/ee"
+            android:textSize="20sp"/>
     </LinearLayout>
+</ScrollView>
 
-    
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
-        android:background="@color/ff"
-        android:text="Save"
-        android:textColor="@color/ee"
-        android:textSize="20sp"/>
+
 
 
 </LinearLayout>

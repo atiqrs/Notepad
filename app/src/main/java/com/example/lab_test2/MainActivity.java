@@ -9,7 +9,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView one,two,three,four,five;
+    static TextView one;
+    static TextView two;
+    TextView three;
+    TextView four;
+    TextView five;
     SharedPreferences sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        diplayData();
+
+    }
+
+    private void diplayData() {
+        SharedPreferences sp = getSharedPreferences("Note1",MODE_PRIVATE);
+        String show = sp.getString("Title",null);
+        if(show != null){
+            one.setText(show);
+        }
 
     }
 }
